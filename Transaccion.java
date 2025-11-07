@@ -1,17 +1,24 @@
-import java.time.LocalDate;
-
+import java.time.*;
 public class Transaccion {
+    //Atributos
     protected String idTransaccion;
     protected double monto;
     protected LocalDate fecha;
     protected Cuenta cuentaAsociada;
     protected Empleado empleadoResponsable;
+    //Constructor
     public Transaccion(String idTransaccion, double monto, Cuenta cuentaAsociada, Empleado empleadoResponsable) {
         this.idTransaccion = idTransaccion;
         this.monto = monto;
         this.fecha = LocalDate.now();
         this.cuentaAsociada = cuentaAsociada;
         this.empleadoResponsable = empleadoResponsable;
+    }
+    public Transaccion(String idTransaccion, double monto, Cuenta cuentaAsociada) {
+        this.idTransaccion = idTransaccion;
+        this.monto = monto;
+        this.fecha = LocalDate.now();
+        this.cuentaAsociada = cuentaAsociada;
     }
     //Getters y Setters
     public String getIdTransaccion() { return idTransaccion; }
